@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="login js-view">
+            <div class="login-img">
+                <img src="logo_lg.png" class="logo" alt="logo">
+                <img src="login_img.png" class="img" alt="登入圖片">
+            </div>
+            <div class="login-input">
+                <h2 class="title">最實用的線上代辦事項服務</h2>
+                <div class="input login_email">
+                    <p>Email</p>
+                    <input type="text" class="input-text login" placeholder="請輸入信箱" id="login_email" required>
+                </div>
+                <div class="input login_password">
+                    <p>密碼</p>
+                    <input type="password" class="input-text login" placeholder="請輸入密碼" id="login_password" required>
+                </div>
+                <button class="button" id="login_btn">登入</button>
+                <a href="#" class="text" id="singup_account">註冊帳號</a>
+            </div>
+        </div>
+        <div class="singup js-view none">
+            <div class="login-img">
+                <img src="logo_lg.png" class="logo" alt="logo">
+                <img src="login_img.png" class="img" alt="登入圖片">
+            </div>
+            <div class="singup-input">
+                <form action="#">
+                    <h2 class="title">註冊帳號</h2>
+                    <ul class="singup_content">
+                        <li>
+                            <p>Email</p>
+                            <input type="email" class="input-text" placeholder="請輸入信箱" id="singup_email" required
+                                name="singup_email">
+                        </li>
+                        <li>
+                            <p>您的暱稱</p>
+                            <input type="text" class="input-text" placeholder="請輸入暱稱" id="singup_name" required
+                                name="singup_name">
+                        </li>
+                        <li>
+                            <p>密碼</p>
+                            <input type="password" class="input-text" placeholder="請輸入密碼至少6位數" id="singup_password" required
+                                name="singup_password" minlength="6">
+                        </li>
+                        <li>
+                            <p>再次輸入密碼</p>
+                            <input type="password" class="input-text" placeholder="請再次輸入密碼" id="repeat_password" required
+                                name="repeat_password" minlength="6">
+                        </li>
+                    </ul>
+                    <input type="submit" id="singup_btn" value="註冊帳號">
+                    <a href="#" class="text" id="return_login">返回登入</a>
+                </form>
+            </div>
+        </div>
+        <div class="todo js-view none">
+            <header class="header">
+                <img src="./logo_lg.png" alt="logo">
+                <div class="user">
+                    <span class="user_name">王小名的代辦</span>
+                    <button class="button_singout">登出</button>
+                </div>
+            </header>
+            <main class="main">
+                <div class="card input">
+                    <input type="text" class="input-item" placeholder="請輸入待辦事項" />
+                    <a href="#" class="button_add">+</a>
+                </div>
+                <div class="card card_list ">
+                    <ul class="tab">
+                        <li class="active" data-tab="all">全部</li>
+                        <li data-tab="todo">待完成</li>
+                        <li data-tab="done">已完成</li>
+                    </ul>
+                    <div class="cart_content">
+                        <ul class="list">
+                        </ul>
+                        <div class="list_footer">
+                            <p class="todoNum">0 個待完成項目</p>
+                            <button class="button_clean">清除已完成項目</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_empty none">
+                    <h2>目前無待辦事項</h2>
+                    <img src="./empty 1.png" alt="無待辦事項" class="img_empty">
+                </div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="todo.js"></script>
+</body>
+
+</html>
